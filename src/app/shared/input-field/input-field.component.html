@@ -1,0 +1,13 @@
+<div class="form-group row">
+    <div class="col-sm-12">
+        <label [attr.for]="id">{{ label }}</label>
+    </div>
+
+    <div class="col-sm-12">
+        <input [type]="type" [id]="id" class="form-control" 
+        [ngClass]="classeCSS" [readonly]="!!isReadOnly"
+        [(ngModel)]="value" (blur)="onTouchedCb(null)">
+        <app-error-msg [controle]="control" [label]="label">
+        </app-error-msg>
+    </div>
+</div>
